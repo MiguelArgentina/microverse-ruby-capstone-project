@@ -1,112 +1,76 @@
 require 'telegram/bot'
-require_relative 'tokens.rb'
-require_relative 'weather_methods.rb'
-require_relative 'logger.rb'
-
+require_relative 'tokens'
+require_relative 'weather_methods'
+require_relative 'bot_state'
 
 class WeatherBot
   include WeatherMethods
+  include BotState
+
   def initialize
     tokens = Tokens.new
+    @current_state = BotState::LISTENING
 
     Telegram::Bot::Client.run(tokens.telegram_token) do |bot|
-      awaiting_weather_response = false
-      awaiting_user_coordinates = false
-
       bot.listen do |message|
-        case message.text
-        when '/start'
+        case message
+        when Telegram::Bot::Types::CallbackQuery
 
-          bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name} ,
-          welcome to Weather bot created by @TucuGomez. This bot will give you weather forecast for you current location, or a desired one.
-          Use  /start to start the bot, /echo to test if the bot is active, /mylocation to get weather forecast for your location, /weather to get weather for any city you prefer and  /stop to end the bot")
+          # bot.api.send_message(chat_id: message.from.id, text: message.data)
+          coordinates = get_coordinates_for_selected_city(bot, message, message.data)
+          units = 'metric'
+          lang = 'en'
+          weather_forecast = get_weather_using_coordinates(coordinates, units, lang, tokens.ow_token)
+          send_forecast_for_received_city_coordinates(bot, message, weather_forecast)
 
-        when '/stop'
+          create_log(message, 'City Search', message.data)
+          @current_state = BotState::LISTENING
+          send_available_commands(bot, message)
 
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: "See you #{message.from.first_name}! Come visit me soon!", date: message.date)
+        when Telegram::Bot::Types::Message
+          case message.text
+          when '/start'
+            send_instructions(bot, message)
+            @current_state = BotState::LISTENING
 
-        when '/weather'
+          when '/stop'
+            stop_bot(bot, message)
 
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: 'Send me the first letters of the location you want the weather forecast for, or hit /mylocation to use your current location', date: message.date)
-          awaiting_weather_response = true
+          when '/weather'
 
-        when '/mylocation'
+            ask_for_city_or_gps_location(bot, message)
+            @current_state = BotState::AWAITING_USER_RESPONSE
 
-          kb_button = [Telegram::Bot::Types::KeyboardButton.new(text: 'Send my coordinates', resize_keyboard: true,
-                                                                remove_keyboard: true, request_location: true)]
-          markup = Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb_button)
-          bot.api.send_message(chat_id: message.chat.id, text: 'Please send me your coordinates', reply_markup: markup)
-          awaiting_weather_response = false
-          awaiting_user_coordinates = true
+          when '/mylocation'
 
-        when '/echo'
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: "Hello #{if message.from.username.nil?
-                                                '_' + message.from.first_name + (message.from.last_name.nil? ? '' : ' ' + message.from.last_name)
-                                              else
-                                                message.from.username
-                                              end}! Echo @ #{Time.at(message.date.to_i).to_datetime}!", date: message.date)
+            ask_user_for_gps_location(bot, message)
+            @current_state = BotState::AWAITING_GPS_COORDINATES
 
-        when '/weatherme'
-          random_gif = Gifme.new.gif_url
-          puts random_gif
-          if random_gif.is_a?(Hash)
-            bot.api.send_message(chat_id: message.chat.id, text: (random_gif['error_message']).to_s,
-                                 date: message.date)
-          end
-          bot.api.sendAnimation(chat_id: message.chat.id, animation: random_gif)
+          when '/echo'
 
-          log_hash = {}
-          log_hash = {
-            'username' => if message.from.username.nil?
-                            '_' + message.from.first_name + (message.from.last_name.nil? ? '' : ' ' + message.from.last_name)
-                          else
-                            message.from.username
-                          end, 'date_time' => Time.at(message.date.to_i).to_datetime, 'gif_sent' => random_gif
-          }
-          logfile = Alogger.new
-          logfile.create_log('New gifme', log_hash)
+            send_echo(bot, message)
 
-        else
+          else
 
-          if awaiting_weather_response
-            markup = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
-            bot.api.send_message(chat_id: message.chat.id, text: 'Searching location', date: message.date)
-            awaiting_weather_response = false
+            if awaiting_response?
 
-          elsif !message.location.nil? && awaiting_user_coordinates
+              @current_state = BotState::AWAITING_CITY_SELECTION if send_back_cities_list(bot, message)
 
+            elsif !message.location.nil? && awaiting_coordinates?
 
-            #get_weather(message.location) # TODO: this method
-            coordinates = Hash.new
-            coordinates = {:lat => message.location.latitude, :lon => message.location.longitude}
-            puts coordinates
-            units = 'metric'
-            lang = 'es'
-            weather_forecast =get_weather_using_coordinates(coordinates, units, lang, tokens.ow_token)
+              coordinates = get_coordinates_from_message(message)
+              units = 'metric'
+              lang = 'en'
+              weather_forecast = get_weather_using_coordinates(coordinates, units, lang, tokens.ow_token)
+              send_forecast_for_received_coordinates(bot, message, weather_forecast)
 
-            markup = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
-            bot.api.send_message(chat_id: message.chat.id, text: "The weather for #{weather_forecast['name']} is #{weather_forecast['weather'][0]['description'].capitalize()}.  The current temperature #{weather_forecast['main']['temp'].to_s}ºc but it feels like #{weather_forecast['main']['feels_like'].to_s}ºc ",
-                                 reply_markup: markup)
-            awaiting_user_coordinates = false
+              create_log(message, 'GPS Search', coordinates)
 
-            log_hash = {}
-            log_hash = {
-              'username' => if message.from.username.nil?
-                              '_' + message.from.first_name + (message.from.last_name.nil? ? '' : ' ' + message.from.last_name)
-                            else
-                              message.from.username
-                            end, 'date_time' => Time.at(message.date.to_i).to_datetime, 'location' => coordinates
-            }
-            logfile = Alogger.new
-            logfile.create_log('New query', log_hash)
+              @current_state = BotState::LISTENING
+              send_available_commands(bot, message)
 
-
-
-          else bot.api.send_message(chat_id: message.chat.id,
-                                    text: "Invalid command, #{message.from.first_name}. You can use  /echo, /start,  /stop, /mylocation or /weather ")
+            else send_invalid_text_response(bot, message)
+            end
           end
         end
       end
