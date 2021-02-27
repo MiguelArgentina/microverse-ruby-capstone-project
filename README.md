@@ -2,6 +2,9 @@
 
 # Telegram Bot
 
+<img width="600" alt="Project Screenshot" src="https://github.com/MiguelArgentina/microverse-ruby-capstone-project/blob/feature/feature_1/bot-screenshot.png">
+
+
 > The is the capstone project for the Ruby module in Microverse 2.0 program
 
 ## Built With
