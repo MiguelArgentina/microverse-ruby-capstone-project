@@ -1,5 +1,6 @@
 require_relative '../lib/tokens'
 require_relative '../lib/weather_methods'
+require_relative '../lib/weather_text_bool_methods'
 require_relative '../lib/bot_state'
 
 class WeatherBot

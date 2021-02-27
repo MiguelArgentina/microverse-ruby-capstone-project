@@ -62,3 +62,5 @@ I, [2021-02-26T22:49:09.223348 #76647]  INFO -- City Search: {"username"=>"TucuG
 I, [2021-02-26T22:49:22.371437 #76647]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 22:49:22.3712 -0300, "location"=>{:lat=>-34.59359, :lon=>-58.38486}}
 I, [2021-02-26T23:06:34.202226 #77050]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:06:34.201831 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
 I, [2021-02-26T23:06:54.058375 #77050]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:06:54.058056 -0300, "location"=>"Saltara,IT"}
+I, [2021-02-26T23:18:58.562769 #77363]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:18:58.562375 -0300, "location"=>{:lat=>-34.593578, :lon=>-58.384838}}
+I, [2021-02-26T23:19:14.899674 #77363]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:19:14.899365 -0300, "location"=>"Saltabarranca,MX"}

@@ -1,6 +1,6 @@
-require_relative '../lib/cities'
 require 'json'
 require 'active_support/inflector'
+require_relative '../lib/cities'
 
 describe Cities do
   let(:city_hash) { Cities.new }

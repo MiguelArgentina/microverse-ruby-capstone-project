@@ -12,7 +12,7 @@
 
 - Get weather forecast given the user's GPS location
 - Get weather forecast for any given city within OpenWeather's API (>200.000 cities)
-- Search function to retrieve up to 10 cities matching the search criteria. (if more than 10 results are given, user will be asked to narrow the search criteria)
+- Search function to retrieve up to 10 cities matching the search criteria. (if more than 20 results are given, user will be asked to narrow the search criteria)
 - Echo function to test if the bot is active
 - Log file to save user, location required and time
 
@@ -28,6 +28,7 @@
 
 ### Setup
 
+* For TSEs: please fill in Telegram Token and API key in ```tokens.rb``` class
 * Clone the repository
 * Get into the repository's root folder
 * Run ```bundle install``` to install the needed gems

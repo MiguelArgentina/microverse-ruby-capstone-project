@@ -1,4 +1,5 @@
 require_relative '../lib/weather_methods'
+require_relative '../lib/weather_text_bool_methods'
 require 'net/http'
 require 'json'
 require 'open-uri'
