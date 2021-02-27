@@ -12,7 +12,7 @@
 
 - Get weather forecast given the user's GPS location
 - Get weather forecast for any given city within OpenWeather's API (>200.000 cities)
-- Search function to retrieve up to 10 cities matching the search criteria.
+- Search function to retrieve up to 10 cities matching the search criteria. (if more than 10 results are given, user will be asked to narrow the search criteria)
 - Echo function to test if the bot is active
 - Log file to save user, location required and time
 
@@ -23,7 +23,7 @@
 * Telegram application installed in your cellphone or in your computer
 * Available internet connection
 * Join [Weather Bot](https://t.me/tucu_clima_bot) channel
-* Permission for accesing GPS from within the app
+* Permission for accessing GPS from within the app
 * Follow instructions
 
 ### Setup
@@ -44,7 +44,7 @@
   * ```/echo``` to test if the bot is active
   * ```/weather``` to let the bot know the user will require a forecast
   * ```/mylocation``` to let the bot know the user will require a forecast based on GPS current location
-  
+
   > (All commands are clickable from within the Telegram app)
 
 

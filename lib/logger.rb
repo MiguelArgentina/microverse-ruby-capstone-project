@@ -1,16 +1,17 @@
-require "logger"
+require 'logger'
 
+# :nodoc:
+module Alogger
+  # def initialize(_aux = nil)
+  #
+  # end
 
-class Alogger
+  def logger_create_log(log_title, message)
+    file = File.open('./assets/log/weatherbot.log', File::WRONLY | File::APPEND)
+    logfile = Logger.new(file)
+    logfile.info(log_title) { message }
+    return true if logfile.close
 
-  def initialize
+    false
   end
-
-  def create_log (log_title, message)
-    logfile = Logger.new File.open('./assets/log/weatherbot.log', File::WRONLY | File::APPEND)
-    logfile.info(log_title) {message }
-    logfile.close()
-    return
-  end
-
 end
