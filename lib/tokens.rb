@@ -14,10 +14,10 @@ class Tokens
   private
 
   def telegram_token
-    'replace_with_telegram_token'
+    'fill_telegram_token_here'
   end
 
   def ow_token
-    'replace_with_open_weather_map_token'
+    'fill_open_weather_map_token_here'
   end
 end
