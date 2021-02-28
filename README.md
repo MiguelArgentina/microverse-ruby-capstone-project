@@ -54,6 +54,10 @@
 
   > (All commands are clickable from within the Telegram app)
 
+### Video with a presentation on how the bot works
+
+[Link to the video](https://www.loom.com/share/4e785bb6aa1b46a88ca832df3740d493)
+
 
 ## Author
 
