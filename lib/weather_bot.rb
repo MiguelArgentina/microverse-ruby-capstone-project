@@ -30,7 +30,6 @@ class WeatherBot
         case message
         when Telegram::Bot::Types::CallbackQuery
 
-          # bot.api.send_message(chat_id: message.from.id, text: message.data)
           coordinates = get_coordinates_for_selected_city(bot, message, message.data)
           units = 'metric'
           lang = 'en'

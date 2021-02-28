@@ -1,7 +1,5 @@
 # :nodoc:
 class Tokens
-  #attr_reader :telegram_token, :ow_token
-
 
   def initialize
 
