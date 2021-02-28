@@ -2,29 +2,18 @@ require 'net/http'
 require 'json'
 require 'open-uri'
 require_relative 'cities'
-require_relative 'logger'
 require_relative 'weather_text_bool_methods'
 
 module WeatherMethods
-  include Alogger
   include WeatherTextBoolMethods
 
   def send_instructions(bot, message)
-    bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name} ,
-    welcome to Weather bot created by @TucuGomez.
-    This bot will give you weather forecast for
-    you current location, or a desired one.
-    Use  /start to start the bot, /echo to test
-    if the bot is active, /mylocation to get weather
-      forecast for your location, /weather to get weather
-       for any city you prefer and  /stop to end the bot")
+    bot.api.send_message(chat_id: message.chat.id, text: get_welcome_text(message))
   end
 
   def ask_for_city_or_gps_location(bot, message)
     bot.api.send_message(chat_id: message.chat.id,
-                         text: 'Send me the first letters of the
-                         location you want the weather forecast for,
-                         or hit /mylocation to use your current location',
+                         text: get_city_or_gps_msg,
                          date: message.date)
   end
 
@@ -42,7 +31,7 @@ module WeatherMethods
                                         else
                                           message.from.username
                                         end}! This is a test method to check if the bot is running.
-                                        Echo @ #{Time.at(message.date.to_i).to_datetime}!", date: message.date)
+Echo @ #{Time.at(message.date.to_i).to_datetime}!", date: message.date)
   end
 
   def get_weather_using_coordinates(coordinates, units, token, lang)
