@@ -13,10 +13,19 @@ class WeatherBot
 
   def initialize
     tokens = Tokens.new
-    @current_state = BotState::LISTENING
-    list_sent = false
 
-    Telegram::Bot::Client.run(tokens.telegram_token) do |bot|
+  end
+
+  def start_bot(current_state, list_sent)
+    start_listening(current_state, list_sent)
+  end
+
+  private
+
+  def start_listening(current_state, list_sent)
+    tokens = Tokens.new
+
+    Telegram::Bot::Client.run(tokens.get_token(:telegram)) do |bot|
       bot.listen do |message|
         case message
         when Telegram::Bot::Types::CallbackQuery
@@ -25,7 +34,7 @@ class WeatherBot
           coordinates = get_coordinates_for_selected_city(bot, message, message.data)
           units = 'metric'
           lang = 'en'
-          weather_forecast = get_weather_using_coordinates(coordinates, units, tokens.ow_token, lang)
+          weather_forecast = get_weather_using_coordinates(coordinates, units, tokens.get_token(:ow), lang)
           forecast_for_coordinates(bot, message, weather_forecast)
 
           create_log(message, 'City Search', message.data)
@@ -70,7 +79,7 @@ class WeatherBot
               coordinates = get_coordinates_from_message(message)
               units = 'metric'
               lang = 'en'
-              weather_forecast = get_weather_using_coordinates(coordinates, units, tokens.ow_token, lang)
+              weather_forecast = get_weather_using_coordinates(coordinates, units, tokens.get_token(:ow), lang)
               send_forecast_for_received_coordinates(bot, message, weather_forecast)
 
               create_log(message, 'GPS Search', coordinates)
