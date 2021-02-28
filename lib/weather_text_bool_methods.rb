@@ -99,4 +99,14 @@ module WeatherTextBoolMethods
     logfile.log_creator_handler(:logger_create_log, query_title, log_hash)
     puts log_hash
   end
+
+  def send_response(bot, message)
+    if message.text.is_a?(String)
+      send_back_cities_list(bot, message)
+      true
+    else
+      send_invalid_text_response(bot, message)
+      false
+    end
+  end
 end

@@ -12,8 +12,7 @@ module WeatherMethods
   end
 
   def ask_for_city_or_gps_location(bot, message)
-    bot.api.send_message(chat_id: message.chat.id,
-                         text: text_for_city_or_gps_msg,
+    bot.api.send_message(chat_id: message.chat.id, text: text_for_city_or_gps_msg,
                          date: message.date)
   end
 
@@ -26,12 +25,14 @@ module WeatherMethods
 
   def send_echo(bot, message)
     bot.api.send_message(chat_id: message.chat.id,
-                         text: "Hello #{if message.from.username.nil?
-                                          "_#{message.from.first_name}"
-                                        else
-                                          message.from.username
-                                        end}! This is a test method to check if the bot is running.
+                         text: "Hello #{get_name_to_display(message)}! This is a test to check if the bot is running.
 Echo @ #{Time.at(message.date.to_i).to_datetime}!", date: message.date)
+  end
+
+  def get_name_to_display(message)
+    return message.from.first_name if message.from.username.nil?
+
+    message.from.username
   end
 
   def get_weather_using_coordinates(coordinates, units, token, lang)
@@ -50,15 +51,32 @@ Echo @ #{Time.at(message.date.to_i).to_datetime}!", date: message.date)
   end
 
   def send_back_cities_list(bot, message)
-    cities_list = Cities.new.get_cities_list(message.text)
+    if message.text.include?(',')
+      country = Cities.new.get_country_name_list(message.text.split(',')[1].strip)
+      if country.size > 5
+        return bot.api.send_message(chat_id: message.chat.id,
+                                    text: 'The search returned more than 5 countries. Please refine your search')
+      end
+      cities_list = Cities.new.get_cities_list_filter_country(message.text.split(',')[0], country)
+    else
+      cities_list = Cities.new.get_cities_list(message.text)
+    end
+    if cities_list.nil?
+      send_invalid_text_response(bot, message)
+      return false
+    end
+    send_message_cities(cities_list, bot, message)
+  end
+
+  def send_message_cities(cities_list, bot, message)
     case cities_list.size
     when 0
       bot.api.send_message(chat_id: message.chat.id,
                            text: 'The search didn´t return any result. Please enter a new name')
       false
     when 20..Float::INFINITY
-      bot.api.send_message(chat_id: message.chat.id,
-                           text: 'The search returned more than 20 results. Please enter a new name')
+      bot.api.send_message(chat_id: message.chat.id, text: 'I got more than 20 results. Please enter a new name.
+You can add the country after the city, separated by a comma (Paris, France)')
       false
     else
       kb = create_keyboard(cities_list)
@@ -71,6 +89,7 @@ Echo @ #{Time.at(message.date.to_i).to_datetime}!", date: message.date)
   def create_keyboard(cities_list)
     kb = []
     kb_row = []
+
     cities_list.each_with_index do |city, index|
       kb_row << Telegram::Bot::Types::InlineKeyboardButton.new(text: "#{city['name']}, #{city['country']}",
                                                                callback_data: "#{city['name']},#{city['country']}")
@@ -94,17 +113,14 @@ Echo @ #{Time.at(message.date.to_i).to_datetime}!", date: message.date)
 
   def send_forecast_for_received_coordinates(bot, message, weather_forecast)
     markup = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
-    bot.api.sendPhoto(chat_id: message.chat.id,
-                      photo: icon_url(weather_forecast['weather'][0]['icon']),
-                      caption: get_coord_caption(weather_forecast),
-                      reply_markup: markup)
+    bot.api.sendPhoto(chat_id: message.chat.id, photo: icon_url(weather_forecast['weather'][0]['icon']),
+                      caption: get_coord_caption(weather_forecast), reply_markup: markup)
   end
 
   def forecast_for_coordinates(bot, message, weather_forecast)
     markup = Telegram::Bot::Types::ReplyKeyboardRemove.new(remove_keyboard: true)
     bot.api.sendPhoto(chat_id: message.from.id,
                       photo: icon_url(weather_forecast['weather'][0]['icon']),
-                      caption: get_city_caption(weather_forecast),
-                      reply_markup: markup)
+                      caption: get_city_caption(weather_forecast), reply_markup: markup)
   end
 end

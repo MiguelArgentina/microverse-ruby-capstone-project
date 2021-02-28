@@ -57,8 +57,7 @@ class WeatherBot
           else
 
             if awaiting_response?
-
-              list_sent = send_back_cities_list(bot, message)
+              list_sent = send_response(bot, message)
 
             elsif list_sent
               @current_state = BotState::AWAITING_CITY_SELECTION
