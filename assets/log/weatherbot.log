@@ -64,3 +64,14 @@ I, [2021-02-26T23:06:34.202226 #77050]  INFO -- GPS Search: {"username"=>"TucuGo
 I, [2021-02-26T23:06:54.058375 #77050]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:06:54.058056 -0300, "location"=>"Saltara,IT"}
 I, [2021-02-26T23:18:58.562769 #77363]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:18:58.562375 -0300, "location"=>{:lat=>-34.593578, :lon=>-58.384838}}
 I, [2021-02-26T23:19:14.899674 #77363]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:19:14.899365 -0300, "location"=>"Saltabarranca,MX"}
+I, [2021-02-27T19:59:41.729163 #2477]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 19:59:41.729016 -0300, "location"=>{:lat=>-34.594568, :lon=>-58.385351}}
+I, [2021-02-27T20:00:51.867744 #2506]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 20:00:51.867616 -0300, "location"=>"Kobeřice,CZ"}
+I, [2021-02-27T20:01:13.482098 #2506]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 20:01:13.482022 -0300, "location"=>"Kobeřice,CZ"}
+I, [2021-02-27T20:02:12.679636 #2506]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 20:02:12.679554 -0300, "location"=>{:lat=>-34.593619, :lon=>-58.384869}}
+I, [2021-02-27T21:07:47.925473 #3388]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:07:47.925317 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
+I, [2021-02-27T21:08:08.086229 #3388]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:08:08.086099 -0300, "location"=>"Kobenbour,LU"}
+I, [2021-02-27T21:22:04.407801 #3717]  INFO -- ["Test title", "test message to get logged"]: nil
+I, [2021-02-27T21:24:42.915407 #3763]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:24:42.91528 -0300, "location"=>{:lat=>-34.59359, :lon=>-58.38486}}]: nil
+I, [2021-02-27T21:25:03.368811 #3763]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:25:03.368681 -0300, "location"=>"Kobersdorf,AT"}]: nil
+I, [2021-02-27T21:37:59.671797 #4038]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:37:59.671666 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}]: nil
+I, [2021-02-27T21:41:13.294763 #4120]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:41:13.294573 -0300, "location"=>{:lat=>-34.593567, :lon=>-58.384816}}]: nil
