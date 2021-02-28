@@ -11,18 +11,9 @@ class WeatherBot
   include WeatherTextBoolMethods
   include BotState
 
-  def initialize
-    tokens = Tokens.new
-
-  end
-
-  def start_bot(current_state, list_sent)
-    start_listening(current_state, list_sent)
-  end
-
-  private
-
-  def start_listening(current_state, list_sent)
+  def initialize(current_state, list_sent)
+    @current_state = current_state
+    @list_sent = list_sent
     tokens = Tokens.new
 
     Telegram::Bot::Client.run(tokens.get_token(:telegram)) do |bot|
