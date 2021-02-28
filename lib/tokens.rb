@@ -17,10 +17,10 @@ class Tokens
 
   private
   def telegram_token
-    telegram_token = ''
+    telegram_token = 'replace_with_telegram_token'
   end
 
   def ow_token
-    ow_token = ''
+    ow_token = 'replace_with_open_weather_map_token'
   end
 end
