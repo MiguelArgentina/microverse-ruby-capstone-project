@@ -1,9 +1,28 @@
 # :nodoc:
 class Tokens
-  attr_reader :telegram_token, :ow_token
+  #attr_reader :telegram_token, :ow_token
+
 
   def initialize
-    @telegram_token = 'Fill_in_Telegram_bot_token_here'
-    @ow_token = 'Fill_in_OW_API_key_here'
+
+  end
+
+  def get_token(identifier)
+    case identifier
+    when :ow
+      ow_token
+    when :telegram
+      telegram_token
+    end
+
+  end
+
+  private
+  def telegram_token
+    telegram_token = ''
+  end
+
+  def ow_token
+    ow_token = ''
   end
 end
