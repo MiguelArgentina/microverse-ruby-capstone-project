@@ -25,7 +25,10 @@
 
 * Telegram application installed in your cellphone or in your computer
 * Available internet connection
-* Join [Weather Bot](https://t.me/tucu_clima_bot) channel
+* Join [Weather Bot](https://t.me/tucu_clima_bot) channel or
+* create a new bot sending a message to [@BotFather](https://telegram.me/BotFather) and follow further instructions to create the bot and get the token
+* Get an API key from [OpenWeatherMap](https://home.openweathermap.org/) to access their forecasts [Instructions here](https://openweathermap.org/api)
+>Note to TSEs: both Telegram and OW API key will be provided in Code Request
 * Permission for accessing GPS from within the app
 * Follow instructions
 
