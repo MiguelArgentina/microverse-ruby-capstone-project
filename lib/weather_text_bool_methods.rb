@@ -38,14 +38,6 @@ module WeatherTextBoolMethods
   end
 
   def get_welcome_text(message)
-    "Hello, #{message.from.first_name} ,
-welcome to Weather bot created by @TucuGomez.
-This bot will give you weather forecast for
-you current location, or a desired one.
-Use  /start to start the bot, /echo to test
-if the bot is active, /mylocation to get weather
-forecast for your location, /weather to get weather
-for any city you prefer and  /stop to end the bot"
     welcome_text = "Hello #{message.from.first_name}, "
     welcome_text.concat('welcome to Weather bot created by @TucuGomez. ')
     welcome_text.concat('This bot will give you the weather forecast for ')
@@ -56,7 +48,7 @@ for any city you prefer and  /stop to end the bot"
     welcome_text.concat('for any city you prefer and  /stop to end the bot')
   end
 
-  def get_city_or_gps_msg
+  def text_for_city_or_gps_msg
     message_text = 'Send me the first letters of the '
     message_text.concat('location you want the weather forecast for, ')
     message_text.concat('or hit /mylocation to use your current location')
@@ -104,7 +96,7 @@ for any city you prefer and  /stop to end the bot"
                     end, 'date_time' => Time.now, 'location' => coordinates
     }
     logfile = Alogger.new
-    logfile.log_creator_handler(:logger_create_log,query_title, log_hash)
+    logfile.log_creator_handler(:logger_create_log, query_title, log_hash)
     puts log_hash
   end
 end

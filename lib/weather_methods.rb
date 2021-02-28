@@ -13,7 +13,7 @@ module WeatherMethods
 
   def ask_for_city_or_gps_location(bot, message)
     bot.api.send_message(chat_id: message.chat.id,
-                         text: get_city_or_gps_msg,
+                         text: text_for_city_or_gps_msg,
                          date: message.date)
   end
 
