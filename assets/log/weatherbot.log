@@ -1,0 +1,106 @@
+I, [2021-02-25T18:45:41.695077 #58770]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-25T18:45:40-03:00 ((2459271j,78340s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593619, :lon=>-58.384869}}
+I, [2021-02-25T19:07:44.803401 #59433]  INFO -- New query: {"username"=>"_Noe", "date_time"=>#<DateTime: 2021-02-25T19:07:43-03:00 ((2459271j,79663s,0n),-10800s,2299161j)>, "location"=>{:lat=>-38.942898, :lon=>-68.046133}}
+I, [2021-02-25T19:13:43.251027 #59433]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-25T19:13:41-03:00 ((2459271j,80021s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593567, :lon=>-58.384816}}
+I, [2021-02-26T10:49:16.892453 #59433]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T10:49:15-03:00 ((2459272j,49755s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593601, :lon=>-58.384882}}
+I, [2021-02-26T12:40:10.648095 #62539]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T12:40:08-03:00 ((2459272j,56408s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593597, :lon=>-58.384824}}
+I, [2021-02-26T12:44:20.706228 #62628]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T12:44:13-03:00 ((2459272j,56653s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593585, :lon=>-58.384802}}
+I, [2021-02-26T12:54:28.084791 #62876]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T12:54:24-03:00 ((2459272j,57264s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593531, :lon=>-58.384843}}
+I, [2021-02-26T12:58:45.304734 #62962]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T12:58:41-03:00 ((2459272j,57521s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593597, :lon=>-58.384824}}
+I, [2021-02-26T14:39:23.020102 #65117]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:39:21-03:00 ((2459272j,63561s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
+I, [2021-02-26T14:40:58.009662 #65157]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:40:56-03:00 ((2459272j,63656s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593622, :lon=>-58.384775}}
+I, [2021-02-26T14:41:29.302178 #65170]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:41:27-03:00 ((2459272j,63687s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593578, :lon=>-58.384838}}
+I, [2021-02-26T14:42:44.461112 #65198]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:42:43-03:00 ((2459272j,63763s,0n),-10800s,2299161j)>, "location"=>nil}
+I, [2021-02-26T14:45:42.354467 #65258]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:45:40-03:00 ((2459272j,63940s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593583, :lon=>-58.384896}}
+I, [2021-02-26T14:46:15.129432 #65258]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:46:13-03:00 ((2459272j,63973s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.59359, :lon=>-58.38486}}
+I, [2021-02-26T14:46:28.650913 #65258]  INFO -- New query: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:46:27-03:00 ((2459272j,63987s,0n),-10800s,2299161j)>, "location"=>nil}
+I, [2021-02-26T14:56:20.713268 #65491]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:56:19-03:00 ((2459272j,64579s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593626, :lon=>-58.384833}}
+I, [2021-02-26T14:56:32.973585 #65491]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:56:31-03:00 ((2459272j,64591s,0n),-10800s,2299161j)>, "location"=>nil}
+I, [2021-02-26T14:58:18.694422 #65537]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T14:58:17-03:00 ((2459272j,64697s,0n),-10800s,2299161j)>, "location"=>"Tucuman"}
+I, [2021-02-26T15:08:24.036240 #65766]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T15:08:22-03:00 ((2459272j,65302s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593601, :lon=>-58.384882}}
+I, [2021-02-26T15:10:14.601807 #65766]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T15:10:05-03:00 ((2459272j,65405s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
+I, [2021-02-26T15:13:58.138936 #65883]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T15:13:56-03:00 ((2459272j,65636s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593585, :lon=>-58.384802}}
+I, [2021-02-26T15:24:53.530930 #66136]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T15:24:51-03:00 ((2459272j,66291s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593578, :lon=>-58.384838}}
+I, [2021-02-26T15:40:52.616660 #66524]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T15:40:51-03:00 ((2459272j,67251s,0n),-10800s,2299161j)>, "location"=>"Tucum"}
+I, [2021-02-26T16:16:46.068147 #67381]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T16:16:44-03:00 ((2459272j,69404s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593549, :lon=>-58.384829}}
+I, [2021-02-26T16:21:51.301625 #67493]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T16:21:49-03:00 ((2459272j,69709s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593619, :lon=>-58.384869}}
+I, [2021-02-26T16:26:13.786783 #67581]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T16:26:12-03:00 ((2459272j,69972s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.59359, :lon=>-58.38486}}
+I, [2021-02-26T16:29:57.779782 #67671]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>#<DateTime: 2021-02-26T16:29:56-03:00 ((2459272j,70196s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
+I, [2021-02-26T16:30:09.593997 #67671]  INFO -- GPS Search: {"username"=>"Chepolas", "date_time"=>#<DateTime: 2021-02-26T16:30:07-03:00 ((2459272j,70207s,0n),-10800s,2299161j)>, "location"=>{:lat=>-34.553666, :lon=>-58.449987}}
+I, [2021-02-26T17:05:14.566169 #68538]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:05:14.565805 -0300, "location"=>{:lat=>-34.59363, :lon=>-58.384891}}
+I, [2021-02-26T17:05:27.454011 #68538]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:05:27.453911 -0300, "location"=>"Tucunduva,BR"}
+I, [2021-02-26T17:07:15.353777 #68587]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:07:15.353622 -0300, "location"=>"Tucunduva,BR"}
+I, [2021-02-26T17:07:33.611312 #68587]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:07:33.611057 -0300, "location"=>"Tucumán Province,AR"}
+I, [2021-02-26T17:07:46.481540 #68587]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:07:46.481237 -0300, "location"=>"Neuquén Province,AR"}
+I, [2021-02-26T17:07:59.014003 #68587]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:07:59.013768 -0300, "location"=>"Tierra del Fuego Province,AR"}
+I, [2021-02-26T17:08:28.707069 #68587]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:08:28.706828 -0300, "location"=>"Salta,AR"}
+I, [2021-02-26T17:10:21.049622 #68658]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:10:21.049382 -0300, "location"=>{:lat=>-34.59363, :lon=>-58.384891}}
+I, [2021-02-26T17:10:37.054246 #68658]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:10:37.054079 -0300, "location"=>"Salta Province,AR"}
+I, [2021-02-26T17:10:50.825006 #68658]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:10:50.824796 -0300, "location"=>"Tijuana,MX"}
+I, [2021-02-26T17:18:26.889207 #68847]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:18:26.888846 -0300, "location"=>{:lat=>-34.593585, :lon=>-58.384802}}
+I, [2021-02-26T17:18:47.985409 #68847]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:18:47.985153 -0300, "location"=>"Mendoza Province,AR"}
+I, [2021-02-26T17:33:30.478356 #69190]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:33:30.477947 -0300, "location"=>"San Miguel de Tucumán,AR"}
+I, [2021-02-26T17:33:52.642008 #69190]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:33:52.641694 -0300, "location"=>"Neuquén Province,AR"}
+I, [2021-02-26T17:34:24.937709 #69190]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:34:24.937456 -0300, "location"=>"Saltadouro,PT"}
+I, [2021-02-26T17:34:50.704913 #69190]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:34:50.704592 -0300, "location"=>{:lat=>-34.593626, :lon=>-58.384833}}
+I, [2021-02-26T17:37:47.808111 #69190]  INFO -- GPS Search: {"username"=>"_Noe", "date_time"=>2021-02-26 17:37:47.807413 -0300, "location"=>{:lat=>-38.942898, :lon=>-68.046133}}
+I, [2021-02-26T17:39:05.951677 #69190]  INFO -- City Search: {"username"=>"_Noe", "date_time"=>2021-02-26 17:39:05.951454 -0300, "location"=>"Neuquén Province,AR"}
+I, [2021-02-26T17:41:16.615756 #69190]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 17:41:16.615524 -0300, "location"=>"Neuquén Province,AR"}
+I, [2021-02-26T17:42:17.595967 #69190]  INFO -- City Search: {"username"=>"_Noe", "date_time"=>2021-02-26 17:42:17.595736 -0300, "location"=>"Grand Junction,US"}
+I, [2021-02-26T18:51:38.752798 #71007]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 18:51:38.752411 -0300, "location"=>{:lat=>-34.593597, :lon=>-58.384824}}
+I, [2021-02-26T18:51:55.234408 #71007]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 18:51:55.2341 -0300, "location"=>"Salta Province,AR"}
+I, [2021-02-26T20:37:42.085706 #73558]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 20:37:42.08542 -0300, "location"=>{:lat=>-34.59356, :lon=>-58.384852}}
+I, [2021-02-26T20:37:58.919424 #73558]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 20:37:58.91919 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
+I, [2021-02-26T20:38:14.605861 #73558]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 20:38:14.605542 -0300, "location"=>"Salta Province,AR"}
+I, [2021-02-26T20:38:47.729846 #73558]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 20:38:47.729612 -0300, "location"=>"Três de Maio,BR"}
+I, [2021-02-26T20:39:51.995425 #73558]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 20:39:51.995191 -0300, "location"=>"Taipei City,TW"}
+I, [2021-02-26T20:41:19.337113 #73641]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 20:41:19.336944 -0300, "location"=>"Kobe,JP"}
+I, [2021-02-26T20:55:15.040447 #73973]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 20:55:15.04005 -0300, "location"=>"Kobelyata,RU"}
+I, [2021-02-26T20:57:34.369907 #74018]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 20:57:34.369556 -0300, "location"=>"Kobe,JP"}
+I, [2021-02-26T22:16:19.793130 #75933]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 22:16:19.792719 -0300, "location"=>{:lat=>-34.59359, :lon=>-58.38486}}
+I, [2021-02-26T22:29:45.550508 #76227]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 22:29:45.550159 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
+I, [2021-02-26T22:49:09.223348 #76647]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 22:49:09.223 -0300, "location"=>"Saltabarranca,MX"}
+I, [2021-02-26T22:49:22.371437 #76647]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 22:49:22.3712 -0300, "location"=>{:lat=>-34.59359, :lon=>-58.38486}}
+I, [2021-02-26T23:06:34.202226 #77050]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:06:34.201831 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
+I, [2021-02-26T23:06:54.058375 #77050]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:06:54.058056 -0300, "location"=>"Saltara,IT"}
+I, [2021-02-26T23:18:58.562769 #77363]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:18:58.562375 -0300, "location"=>{:lat=>-34.593578, :lon=>-58.384838}}
+I, [2021-02-26T23:19:14.899674 #77363]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-26 23:19:14.899365 -0300, "location"=>"Saltabarranca,MX"}
+I, [2021-02-27T19:59:41.729163 #2477]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 19:59:41.729016 -0300, "location"=>{:lat=>-34.594568, :lon=>-58.385351}}
+I, [2021-02-27T20:00:51.867744 #2506]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 20:00:51.867616 -0300, "location"=>"Kobeřice,CZ"}
+I, [2021-02-27T20:01:13.482098 #2506]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 20:01:13.482022 -0300, "location"=>"Kobeřice,CZ"}
+I, [2021-02-27T20:02:12.679636 #2506]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 20:02:12.679554 -0300, "location"=>{:lat=>-34.593619, :lon=>-58.384869}}
+I, [2021-02-27T21:07:47.925473 #3388]  INFO -- GPS Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:07:47.925317 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}
+I, [2021-02-27T21:08:08.086229 #3388]  INFO -- City Search: {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:08:08.086099 -0300, "location"=>"Kobenbour,LU"}
+I, [2021-02-27T21:22:04.407801 #3717]  INFO -- ["Test title", "test message to get logged"]: nil
+I, [2021-02-27T21:24:42.915407 #3763]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:24:42.91528 -0300, "location"=>{:lat=>-34.59359, :lon=>-58.38486}}]: nil
+I, [2021-02-27T21:25:03.368811 #3763]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:25:03.368681 -0300, "location"=>"Kobersdorf,AT"}]: nil
+I, [2021-02-27T21:37:59.671797 #4038]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:37:59.671666 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}]: nil
+I, [2021-02-27T21:41:13.294763 #4120]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-27 21:41:13.294573 -0300, "location"=>{:lat=>-34.593567, :lon=>-58.384816}}]: nil
+I, [2021-02-28T01:28:00.102553 #8010]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 01:28:00.102083 -0300, "location"=>{:lat=>-34.593567, :lon=>-58.384816}}]: nil
+I, [2021-02-28T01:29:01.815590 #8010]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 01:29:01.815245 -0300, "location"=>"Mendoza Province,AR"}]: nil
+I, [2021-02-28T01:45:03.487191 #8475]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 01:45:03.486789 -0300, "location"=>{:lat=>-34.593578, :lon=>-58.384838}}]: nil
+I, [2021-02-28T01:55:20.813544 #8711]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 01:55:20.813135 -0300, "location"=>{:lat=>-34.593585, :lon=>-58.384802}}]: nil
+I, [2021-02-28T01:55:38.537106 #8711]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 01:55:38.536776 -0300, "location"=>"Koberg,DE"}]: nil
+I, [2021-02-28T02:20:05.050293 #9228]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 02:20:05.049864 -0300, "location"=>{:lat=>-34.593619, :lon=>-58.384869}}]: nil
+I, [2021-02-28T02:45:43.066946 #10002]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 02:45:43.066553 -0300, "location"=>{:lat=>-34.593549, :lon=>-58.384829}}]: nil
+I, [2021-02-28T02:46:19.661591 #10002]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 02:46:19.661253 -0300, "location"=>"Santiago del Estero Province,AR"}]: nil
+I, [2021-02-28T03:12:02.137032 #10644]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 03:12:02.136615 -0300, "location"=>{:lat=>-34.593578, :lon=>-58.384838}}]: nil
+I, [2021-02-28T03:22:50.734652 #10941]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 03:22:50.734218 -0300, "location"=>{:lat=>-34.593585, :lon=>-58.384802}}]: nil
+I, [2021-02-28T03:26:16.568279 #11024]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 03:26:16.567894 -0300, "location"=>"San Juan,AR"}]: nil
+I, [2021-02-28T04:25:47.360171 #12358]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 04:25:47.359719 -0300, "location"=>"Tucumã,BR"}]: nil
+I, [2021-02-28T04:29:33.152104 #12437]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 04:29:33.151683 -0300, "location"=>"San Juan,AR"}]: nil
+I, [2021-02-28T04:30:20.879493 #12437]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 04:30:20.879236 -0300, "location"=>{:lat=>-34.594568, :lon=>-58.385351}}]: nil
+I, [2021-02-28T04:37:43.599808 #12674]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 04:37:43.599312 -0300, "location"=>"San Juan,AR"}]: nil
+I, [2021-02-28T04:38:13.566812 #12674]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 04:38:13.566553 -0300, "location"=>{:lat=>-34.593578, :lon=>-58.384838}}]: nil
+I, [2021-02-28T15:46:08.132534 #13132]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 15:46:08.13211 -0300, "location"=>{:lat=>-34.59363, :lon=>-58.384891}}]: nil
+I, [2021-02-28T15:54:52.032887 #13330]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 15:54:52.032508 -0300, "location"=>"San Juan Province,AR"}]: nil
+I, [2021-02-28T15:55:57.889995 #13345]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 15:55:57.889615 -0300, "location"=>"Kigali,RW"}]: nil
+I, [2021-02-28T15:56:19.779505 #13345]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 15:56:19.779258 -0300, "location"=>"New York,US"}]: nil
+I, [2021-02-28T15:56:53.064682 #13345]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 15:56:53.064408 -0300, "location"=>"Avil-Chicago,GA"}]: nil
+I, [2021-02-28T16:13:37.855616 #13762]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 16:13:37.855138 -0300, "location"=>{:lat=>-34.593597, :lon=>-58.384824}}]: nil
+I, [2021-02-28T16:14:07.174264 #13762]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 16:14:07.173891 -0300, "location"=>"San Juan,AR"}]: nil
+I, [2021-02-28T16:16:25.297361 #13823]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 16:16:25.296941 -0300, "location"=>{:lat=>-34.59359, :lon=>-58.38486}}]: nil
+I, [2021-02-28T16:16:56.061725 #13823]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 16:16:56.061362 -0300, "location"=>"Aldea San Juan,AR"}]: nil
+I, [2021-02-28T16:25:37.560907 #14029]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 16:25:37.560416 -0300, "location"=>{:lat=>-34.593608, :lon=>-58.384847}}]: nil
+I, [2021-02-28T16:26:12.900396 #14029]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 16:26:12.900049 -0300, "location"=>"Aldea San Juan,AR"}]: nil
+I, [2021-02-28T16:28:16.364721 #14102]  INFO -- ["GPS Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 16:28:16.364302 -0300, "location"=>{:lat=>-34.593619, :lon=>-58.384869}}]: nil
+I, [2021-02-28T16:28:43.209724 #14102]  INFO -- ["City Search", {"username"=>"TucuGomez", "date_time"=>2021-02-28 16:28:43.209303 -0300, "location"=>"Tsukigata,JP"}]: nil
